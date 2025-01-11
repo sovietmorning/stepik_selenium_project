@@ -28,7 +28,16 @@ def test_guest_can_add_product_to_basket(browser, offer_number):
     page.should_be_right_price_in_success_message()
 
 
-def test_guest_doesnt_see_success_message_without_adding_product(browser):
+@pytest.mark.xfail
+def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
+    page = ProductPage(browser, link)
+    page.open()
+    page.add_product_to_basket()
+    page.should_not_be_success_message()
+
+
+def test_guest_cant_see_success_message(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
     page = ProductPage(browser, link)
     page.open()
@@ -36,7 +45,7 @@ def test_guest_doesnt_see_success_message_without_adding_product(browser):
 
 
 @pytest.mark.xfail
-def test_success_message_doesnt_disappear_after_adding_product_to_basket(browser):
+def test_message_disappeared_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
     page = ProductPage(browser, link)
     page.open()
