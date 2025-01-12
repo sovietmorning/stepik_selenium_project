@@ -38,15 +38,6 @@ class TestUserAddToBasketFromProductPage:
 
 
 @pytest.mark.need_review
-def test_guest_can_add_product_to_basket(browser):
-    page = ProductPage(browser, product_page_link1)
-    page.open()
-    page.add_product_to_basket()
-    page.should_be_right_product_title_in_success_message()
-    page.should_be_right_price_in_success_message()
-
-
-@pytest.mark.need_review
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page = ProductPage(browser, product_page_link2)
     page.open()
@@ -65,7 +56,7 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     login_page.should_be_login_page()
 
 
-@pytest.mark.skip
+@pytest.mark.need_review
 @pytest.mark.parametrize(
     "offer_number",
     [
@@ -81,7 +72,7 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
         "9",
     ],
 )
-def test_guest_can_add_product_to_basket_with_quiz(browser, offer_number):
+def test_guest_can_add_product_to_basket(browser, offer_number):
     link = f"{product_page_link1}?promo=offer{offer_number}"
     page = ProductPage(browser, link)
     page.open()
