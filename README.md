@@ -1,6 +1,6 @@
-## :robot: Selenium Web Test Automation: Course Final Project
+## :robot: Selenium Web Test Automation: Stepik Course Final Project
 
-Проект создан при выполнении финального задания курса ["Автоматизация тестирования с помощью Selenium и Python"](https://stepik.org/course/575) на платформе Stepik. Реализован для страниц учебного интернет-магазина [Oscar Sandbox](https://selenium1py.pythonanywhere.com/).
+Проект создан при выполнении финального задания курса ["Автоматизация тестирования с помощью Selenium и Python"](https://stepik.org/course/575) на платформе Stepik. Реализован для страниц учебного интернет-магазина [Oscar Sandbox](https://selenium1py.pythonanywhere.com/)
 
 :white_check_mark: Стек технологий:
 
@@ -22,6 +22,6 @@
 :white_check_mark: Команды для запуска тестов:
 
 - запуск всех тестов:
-  pytest -v --tb=line --language=ru
+  `pytest -v --tb=line --language=ru`
 - запуск тестов с пометкой "need_review":
-  pytest -v --tb=line --language=en -m need_review
+  `pytest -v --tb=line --language=en -m need_review`
