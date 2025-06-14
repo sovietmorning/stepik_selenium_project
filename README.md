@@ -4,7 +4,7 @@
 
 #### :white_check_mark: **Стек технологий**
 
-- Pyhton 3.13.0
+- Python 3.13.0
 - Selenium WebDriver 4+
 - Pytest (с фикстурами, параметризацией и ожидаемо падающими тестами)
 
